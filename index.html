@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A reasoning trace is a serving bill</title>
+<style>
+body{font:16px/1.6 -apple-system,"Segoe UI",Roboto,sans-serif;max-width:42rem;margin:2rem auto;padding:0 1rem;color:#16181a;background:#fcfdfd}
+h1{font-size:1.4rem;margin-bottom:.3rem}
+h2{font-size:1.05rem;margin-top:1.9rem;margin-bottom:.4rem}
+p{margin:.5rem 0}
+a{color:#0a58ca}
+footer{margin-top:2.6rem;color:#555;font-size:.9rem}
+</style>
+</head>
+<body>
+<h1>PastAGI</h1>
+<p><a href="https://pastagi.com/">PastAGI</a> runs serving-cost audits on AI systems, and one habit shows up on nearly every bill it prices: making the model show its work. A reasoning trace reads like free diligence. Metered, it is output tokens, and output is the side of the invoice that grows when a model explains itself.</p>
+
+<h2>Doubling the output is not doubling the bill</h2>
+<p>Take one request at 660 input tokens. Plain answer: 220 output tokens, 880 total. With the chain written out: 480 output tokens, 1,140 total. The trace more than doubles the output side, yet the whole request grows only 30 percent, because input still carries the majority weight. That ratio is the whole audit finding. Teams quote "the trace doubles cost" and skip the request; the audit meter says the request rose from 880 to 1,140, a 1.3x line item, not a 2x one.</p>
+
+<h2>Trace edits inherit nothing</h2>
+<p>The expensive part is not the trace. It is changing its format. A one-line prompt edit touches the small share of an eval set that inherits the changed instruction, so a retest stays partial. Reformat the trace and every graded run reruns: 200 cases at 12 seconds each is 40 minutes of serving on the spot, before anyone compares outputs. Billed per hour, a formatting tweak spends most of its audit hour being re-measured rather than decided on.</p>
+
+<h2>Price the explanation before asking for it</h2>
+<p>Reasoning transparency earns its keep where errors cost more than tokens. The serving-cost audit on <a href="https://pastagi.com/">pastagi.com</a> puts the number next to the habit first: output share, total-request growth, and the retest bill a format change triggers. Then the team can decide which requests deserve to think out loud.</p>
+
+<footer>James Verlander, Poket Dev LLC, Detroit</footer>
+</body>
+</html>
